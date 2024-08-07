@@ -50,13 +50,13 @@ export function useMainContract() {
     ...contractData,
     balance,
     sendIncrement: () => {
-      return mainContract?.sendIncrement(sender, toNano(0.05), 3);
+      return mainContract?.sendIncrement(sender, toNano(0.05), 0.05);
     },
     sendDeposit: () => {
-      return mainContract?.sendDeposit(sender, toNano(2));
+      return mainContract?.sendDeposit(sender, toNano(0.02));
     },
     sendWithdrawalRequest: () => {
-      return mainContract?.sendWithdrawalRequest(sender, toNano(0.05), toNano(0.2));
+      return mainContract?.sendWithdrawalRequest(sender, toNano(0.05), toNano(0.7));
     },
   };
 }
